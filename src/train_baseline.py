@@ -25,8 +25,8 @@ def train():
 
     X_u, u_train, X_f, X_star, u_star, lb, ub = load_burgers_data(
         data_path='data/burgers_shock.mat',
-        N_u=100,
-        N_f=6000,
+        N_u=200,
+        N_f=10000,
         device=device
     )
 
@@ -155,20 +155,20 @@ def train():
 
     print(f"\n{'='*40}")
     print(f" L2 Relative Error : {error:.4e}")
-    print(f" Raissi 2019 target: ~7.2e-03")
+    print(f" Raissi 2019 target: ~4.9e-04")
     print(f" Total Time        : {time.time()-start:.0f}s")
     print(f"{'='*40}")
 
-    os.makedirs('results/nu100_nf6000', exist_ok=True)
+    os.makedirs('results/nu200_nf10000', exist_ok=True)
     torch.save({
         'model_state': model.state_dict(),
         'history': history,
         'l2_error': error,
         'lb': lb,
         'ub': ub,
-        'config': {'layers': layers, 'N_u': 100, 'N_f': 6000}
-    }, 'results/nu100_nf6000/model.pt')
-    print("Saved: results/nu100_nf6000/model.pt")
+        'config': {'layers': layers, 'N_u': 200, 'N_f': 10000}
+    }, 'results/nu200_nf10000/model.pt')
+    print("Saved: results/nu200_nf10000/model.pt")
 
     return model, history, error
 

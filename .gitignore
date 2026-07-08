@@ -1,0 +1,22 @@
+
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+.env
+venv/
+pinn_env/
+
+# Data
+data/*.mat
+
+# Results
+results/**/*.png
+results/**/*.pdf
+
+# Jupyter
+.ipynb_checkpoints/
+
+# IDE
+.vscode/
+.idea/

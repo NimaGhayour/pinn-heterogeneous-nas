@@ -107,5 +107,5 @@ Results are saved to `results/` as `model.pt` (model weights + training history 
 2. Deb, K., Pratap, A., Agarwal, S., & Meyarivan, T. (2002). A fast and elitist multiobjective genetic algorithm: NSGA-II. *IEEE Transactions on Evolutionary Computation*, 6(2), 182–197.
 3. Jagtap, A. D., Kawaguchi, K., & Karniadakis, G. E. (2020). Locally adaptive activation functions with slope recovery for deep and physics-informed neural networks. *Proceedings of the Royal Society A*, 476(2239).
 4. Cuomo, S., et al. (2022). Scientific machine learning through physics-informed neural networks: Where we are and what's next. *Journal of Scientific Computing*, 92, 88.
-5. Wong, J. H., et al. (2025). Evolutionary optimization of physics-informed neural networks: Evo-PINN frontiers and opportunities. *(Survey)*
+5. Wong, J. C., et al. (2025). Evolutionary optimization of physics-informed neural networks: Evo-PINN frontiers and opportunities. *(Survey)*
 

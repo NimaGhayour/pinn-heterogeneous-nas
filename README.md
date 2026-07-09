@@ -73,10 +73,7 @@ pip install -r requirements.txt
 
 **Requirements:** Python 3.10+, PyTorch, NumPy, SciPy
 
-# Download Burgers equation data
-# From Raissi et al. GitHub (branch: master, path: appendix/Data/burgers_shock.mat)
-# https://github.com/maziarraissi/PINNs/blob/master/appendix/Data/burgers_shock.mat
-# Place it in: data/burgers_shock.mat
+**Data:** Download `burgers_shock.mat` from the [Raissi et al. GitHub](https://github.com/maziarraissi/PINNs/blob/master/appendix/Data/burgers_shock.mat) (branch: `master` → `appendix/Data/`) and place it in `data/burgers_shock.mat`.
 
 ---
 

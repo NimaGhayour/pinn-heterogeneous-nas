@@ -59,7 +59,7 @@ Collocation points sampled with **Latin Hypercube Sampling (LHS)** via `scipy.st
 | 100 | 6000  | 7.2e-03 | **6.45e-04** ✅ | ~3218s |
 | 200 | 10000 | 4.9e-04 | **3.31e-04** ✅ | ~6937s |
 
-> **Note on timing:** Raissi reports ~60s on an NVIDIA Titan X GPU. Our CPU runs are ~80× slower, consistent with known GPU/CPU speedup ratios for this class of problem (see also: Müller & Zeinhofer, 2023, who report ~4442s for the same setup on CPU).
+> **Note on timing:** Raissi reports ~60s on an NVIDIA Titan X GPU. Our CPU runs are ~80× slower (this is consistent with known GPU/CPU speedup ratios for this class of problem).
 
 ---
 

@@ -92,7 +92,7 @@ Results are saved to `results/` as `model.pt` (model weights + training history 
 
 - [x] Baseline PINN replication (Raissi 2019)
 - [x] Sensitivity analysis: effect of N_u and N_f on L2 error
-- [ ] Heterogeneous PINN: per-layer activation function support
+- [x] Heterogeneous PINN: per-layer activation function support
 - [ ] NSGA-II framework: chromosome encoding, crossover, mutation
 - [ ] Multi-objective fitness evaluation (accuracy + stability)
 - [ ] Pareto Front analysis and visualization

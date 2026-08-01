@@ -92,7 +92,7 @@ Results are saved to `results/` as `model.pt` (model weights + training history 
 
 - [x] Baseline PINN replication (Raissi 2019)
 - [x] Sensitivity analysis: effect of N_u and N_f on L2 error
-- [ ] Heterogeneous PINN: per-layer activation function support
+- [x] Heterogeneous PINN: per-layer activation function support
 - [ ] NSGA-II framework: chromosome encoding, crossover, mutation
 - [ ] Multi-objective fitness evaluation (accuracy + stability)
 - [ ] Pareto Front analysis and visualization
@@ -109,3 +109,4 @@ Results are saved to `results/` as `model.pt` (model weights + training history 
 4. Cuomo, S., et al. (2022). Scientific machine learning through physics-informed neural networks: Where we are and what's next. *Journal of Scientific Computing*, 92, 88.
 5. Wong, J. C., et al. (2025). Evolutionary optimization of physics-informed neural networks: Evo-PINN frontiers and opportunities. *(Survey)*
 
+ 

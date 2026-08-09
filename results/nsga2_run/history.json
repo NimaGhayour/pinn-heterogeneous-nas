@@ -1,0 +1,214 @@
+{
+  "pareto_front": [
+    {
+      "chromosome": [
+        1,
+        1,
+        2,
+        1,
+        0,
+        2,
+        1,
+        2
+      ],
+      "f1": 0.001292233266642661,
+      "f2": 1.4303735439843157e-16,
+      "info": {
+        "chromosome": [
+          1,
+          1,
+          2,
+          1,
+          0,
+          2,
+          1,
+          2
+        ],
+        "chromosome_str": "[sine, sine, swish, sine, tanh, swish, sine, swish]",
+        "f1_l2_error": 0.001292233266642661,
+        "f2_loss_variance": 1.4303735439843157e-16,
+        "lbfgs_iters": 10897,
+        "elapsed_sec": 1242.6
+      },
+      "rank": 0,
+      "crowding": Infinity
+    },
+    {
+      "chromosome": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        2,
+        2,
+        0
+      ],
+      "f1": 0.009555507949624837,
+      "f2": 8.75563786348038e-17,
+      "info": {
+        "chromosome": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          2,
+          2,
+          0
+        ],
+        "chromosome_str": "[tanh, tanh, tanh, tanh, tanh, swish, swish, tanh]",
+        "f1_l2_error": 0.009555507949624837,
+        "f2_loss_variance": 8.75563786348038e-17,
+        "lbfgs_iters": 10995,
+        "elapsed_sec": 1143.1
+      },
+      "rank": 0,
+      "crowding": 1.5336229363003997
+    },
+    {
+      "chromosome": [
+        0,
+        0,
+        2,
+        0,
+        2,
+        2,
+        0,
+        0
+      ],
+      "f1": 0.011270448886708783,
+      "f2": 8.146919427709042e-18,
+      "info": {
+        "chromosome": [
+          0,
+          0,
+          2,
+          0,
+          2,
+          2,
+          0,
+          0
+        ],
+        "chromosome_str": "[tanh, tanh, swish, tanh, swish, swish, tanh, tanh]",
+        "f1_l2_error": 0.011270448886708783,
+        "f2_loss_variance": 8.146919427709042e-18,
+        "lbfgs_iters": 10860,
+        "elapsed_sec": 1207.4
+      },
+      "rank": 0,
+      "crowding": 1.1333234032506292
+    },
+    {
+      "chromosome": [
+        0,
+        0,
+        0,
+        0,
+        1,
+        2,
+        0,
+        2
+      ],
+      "f1": 0.018924057192246345,
+      "f2": 3.644841262129608e-18,
+      "info": {
+        "chromosome": [
+          0,
+          0,
+          0,
+          0,
+          1,
+          2,
+          0,
+          2
+        ],
+        "chromosome_str": "[tanh, tanh, tanh, tanh, sine, swish, tanh, swish]",
+        "f1_l2_error": 0.018924057192246345,
+        "f2_loss_variance": 3.644841262129608e-18,
+        "lbfgs_iters": 11161,
+        "elapsed_sec": 1118.2
+      },
+      "rank": 0,
+      "crowding": Infinity
+    }
+  ],
+  "history": [
+    {
+      "generation": 0,
+      "f1_min": 0.001292233266642661,
+      "f1_mean": 0.014345799192739957,
+      "f2_min": 8.75563786348038e-17,
+      "f2_mean": 4.895503465323353e-16,
+      "pareto_size": 2,
+      "unique_chromosomes": 8
+    },
+    {
+      "generation": 1,
+      "f1_min": 0.001292233266642661,
+      "f1_mean": 0.008835018569217605,
+      "f2_min": 8.146919427709042e-18,
+      "f2_mean": 3.868116511609149e-16,
+      "pareto_size": 3,
+      "unique_chromosomes": 8,
+      "elapsed_sec": 9363.0
+    },
+    {
+      "generation": 2,
+      "f1_min": 0.001292233266642661,
+      "f1_mean": 0.008238506327559054,
+      "f2_min": 8.146919427709042e-18,
+      "f2_mean": 3.150765219790329e-16,
+      "pareto_size": 3,
+      "unique_chromosomes": 8,
+      "elapsed_sec": 12322.3
+    },
+    {
+      "generation": 3,
+      "f1_min": 0.001292233266642661,
+      "f1_mean": 0.008216897838337227,
+      "f2_min": 8.146919427709042e-18,
+      "f2_mean": 3.0314108053954322e-16,
+      "pareto_size": 3,
+      "unique_chromosomes": 8,
+      "elapsed_sec": 12546.1
+    },
+    {
+      "generation": 4,
+      "f1_min": 0.001292233266642661,
+      "f1_mean": 0.009712260697783769,
+      "f2_min": 3.644841262129608e-18,
+      "f2_mean": 2.7603489027700794e-16,
+      "pareto_size": 4,
+      "unique_chromosomes": 8,
+      "elapsed_sec": 8970.6
+    },
+    {
+      "generation": 5,
+      "f1_min": 0.001292233266642661,
+      "f1_mean": 0.009712260697783769,
+      "f2_min": 3.644841262129608e-18,
+      "f2_mean": 2.7603489027700794e-16,
+      "pareto_size": 4,
+      "unique_chromosomes": 8,
+      "elapsed_sec": 9387.9
+    },
+    {
+      "generation": 6,
+      "f1_min": 0.001292233266642661,
+      "f1_mean": 0.009712260697783769,
+      "f2_min": 3.644841262129608e-18,
+      "f2_mean": 2.7603489027700794e-16,
+      "pareto_size": 4,
+      "unique_chromosomes": 8,
+      "elapsed_sec": 8613.3
+    }
+  ],
+  "config": {
+    "pop_size": 8,
+    "n_generations": 6,
+    "crossover_prob": 0.9,
+    "mutation_prob": 0.25,
+    "seed": 42
+  }
+}

@@ -1,0 +1,178 @@
+[
+  {
+    "index": 0,
+    "f1": 0.030885690328866178,
+    "f2": 1.0225246595810102e-08,
+    "info": {
+      "chromosome": [
+        1,
+        2,
+        1,
+        0,
+        2,
+        1,
+        1,
+        1
+      ],
+      "chromosome_str": "[sine, swish, sine, tanh, swish, sine, sine, sine]",
+      "f1_l2_error": 0.030885690328866178,
+      "f2_loss_variance": 1.0225246595810102e-08,
+      "lbfgs_iters": 10871,
+      "elapsed_sec": 1874.1
+    }
+  },
+  {
+    "index": 1,
+    "f1": 0.03785536055689127,
+    "f2": 1.1962788126273099e-08,
+    "info": {
+      "chromosome": [
+        2,
+        0,
+        2,
+        2,
+        0,
+        0,
+        2,
+        1
+      ],
+      "chromosome_str": "[swish, tanh, swish, swish, tanh, tanh, swish, sine]",
+      "f1_l2_error": 0.03785536055689127,
+      "f2_loss_variance": 1.1962788126273099e-08,
+      "lbfgs_iters": 10798,
+      "elapsed_sec": 2214.1
+    }
+  },
+  {
+    "index": 2,
+    "f1": 0.11075087406350133,
+    "f2": 3.687443015578471e-07,
+    "info": {
+      "chromosome": [
+        0,
+        2,
+        1,
+        2,
+        1,
+        0,
+        1,
+        0
+      ],
+      "chromosome_str": "[tanh, swish, sine, swish, sine, tanh, sine, tanh]",
+      "f1_l2_error": 0.11075087406350133,
+      "f2_loss_variance": 3.687443015578471e-07,
+      "lbfgs_iters": 10837,
+      "elapsed_sec": 2023.7
+    }
+  },
+  {
+    "index": 3,
+    "f1": 0.04889527172571013,
+    "f2": 3.5598461679508668e-09,
+    "info": {
+      "chromosome": [
+        1,
+        1,
+        1,
+        0,
+        0,
+        2,
+        2,
+        1
+      ],
+      "chromosome_str": "[sine, sine, sine, tanh, tanh, swish, swish, sine]",
+      "f1_l2_error": 0.04889527172571013,
+      "f2_loss_variance": 3.5598461679508668e-09,
+      "lbfgs_iters": 10745,
+      "elapsed_sec": 1902.0
+    }
+  },
+  {
+    "index": 4,
+    "f1": 0.019057206245978897,
+    "f2": 1.9120627906278214e-10,
+    "info": {
+      "chromosome": [
+        2,
+        2,
+        0,
+        2,
+        1,
+        0,
+        2,
+        1
+      ],
+      "chromosome_str": "[swish, swish, tanh, swish, sine, tanh, swish, sine]",
+      "f1_l2_error": 0.019057206245978897,
+      "f2_loss_variance": 1.9120627906278214e-10,
+      "lbfgs_iters": 10823,
+      "elapsed_sec": 2209.8
+    }
+  },
+  {
+    "index": 5,
+    "f1": 0.17853075568527169,
+    "f2": 2.1581534943828497e-07,
+    "info": {
+      "chromosome": [
+        0,
+        1,
+        0,
+        1,
+        1,
+        0,
+        0,
+        2
+      ],
+      "chromosome_str": "[tanh, sine, tanh, sine, sine, tanh, tanh, swish]",
+      "f1_l2_error": 0.17853075568527169,
+      "f2_loss_variance": 2.1581534943828497e-07,
+      "lbfgs_iters": 10961,
+      "elapsed_sec": 1866.9
+    }
+  },
+  {
+    "index": 6,
+    "f1": 0.06939501227355532,
+    "f2": 1.3028455994167997e-08,
+    "info": {
+      "chromosome": [
+        2,
+        1,
+        1,
+        2,
+        1,
+        2,
+        2,
+        1
+      ],
+      "chromosome_str": "[swish, sine, sine, swish, sine, swish, swish, sine]",
+      "f1_l2_error": 0.06939501227355532,
+      "f2_loss_variance": 1.3028455994167997e-08,
+      "lbfgs_iters": 10909,
+      "elapsed_sec": 2387.4
+    }
+  },
+  {
+    "index": 7,
+    "f1": 0.18945529691972532,
+    "f2": 1.5148434680627718e-07,
+    "info": {
+      "chromosome": [
+        0,
+        0,
+        2,
+        0,
+        2,
+        2,
+        0,
+        0
+      ],
+      "chromosome_str": "[tanh, tanh, swish, tanh, swish, swish, tanh, tanh]",
+      "f1_l2_error": 0.18945529691972532,
+      "f2_loss_variance": 1.5148434680627718e-07,
+      "lbfgs_iters": 10716,
+      "elapsed_sec": 2088.0
+    }
+  }
+]

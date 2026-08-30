@@ -6,7 +6,7 @@ import os
 from scipy.optimize import minimize
 
 from src.pinn_heterogeneous import HeterogeneousPINN
-
+from src.pinn_helmholtz import HeterogeneousPINNHelmholtz
 
 LAYERS = [2, 20, 20, 20, 20, 20, 20, 20, 20, 1]
 
@@ -20,12 +20,12 @@ def l2_relative_error(pred, exact):
 
 
 def evaluate(chromosome, X_u, u_train, X_f, X_star, u_star, lb, ub,
-             device='cpu', seed=1234, verbose=False):
+             device='cpu', seed=1234, verbose=False, model_class=HeterogeneousPINN):
     torch.manual_seed(seed)
     np.random.seed(seed)
     torch.set_default_dtype(torch.float64)
 
-    model = HeterogeneousPINN(LAYERS, lb, ub, chromosome).to(device)
+    model = model_class(LAYERS, lb, ub, chromosome).to(device)
     start = time.time()
     lbfgs_loss_history = []
 
@@ -109,7 +109,8 @@ def evaluate(chromosome, X_u, u_train, X_f, X_star, u_star, lb, ub,
 
 
 def evaluate_population(population, X_u, u_train, X_f, X_star, u_star,
-                         lb, ub, device='cpu', checkpoint_path=None):
+                         lb, ub, device='cpu', checkpoint_path=None,
+                         model_class=HeterogeneousPINN):
     results = []
     evaluated_indices = set()
     chromosome_cache = {}
@@ -138,7 +139,7 @@ def evaluate_population(population, X_u, u_train, X_f, X_star, u_star,
             print(f"Evaluating [{i+1}/{len(population)}] {chromosome} ...")
             f1, f2, info = evaluate(
                 chromosome, X_u, u_train, X_f, X_star, u_star,
-                lb, ub, device=device, verbose=False
+                lb, ub, device=device, verbose=False, model_class=model_class
             )
             chromosome_cache[key] = {'f1': f1, 'f2': f2, 'info': info}
             results.append({'index': i, 'f1': f1, 'f2': f2, 'info': info})

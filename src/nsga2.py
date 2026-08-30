@@ -6,6 +6,7 @@ import time
 from copy import deepcopy
 
 from src.evaluator import evaluate_population
+from src.pinn_heterogeneous import HeterogeneousPINN
 
 
 # ─────────────────────────────────────────────────────────────
@@ -392,9 +393,10 @@ def load_checkpoint(path):
 # ─────────────────────────────────────────────────────────────
 
 def run_nsga2(X_u, u_train, X_f, X_star, u_star, lb, ub,
-              device='cpu',
-              checkpoint_path='results/nsga2_run/checkpoint.json',
-              history_path='results/nsga2_run/history.json'):
+                device='cpu',
+                checkpoint_path='results/nsga2_run/checkpoint.json',
+                history_path='results/nsga2_run/history.json',
+                model_class=None):
     """
     Run NSGA-II to find the Pareto-optimal set of heterogeneous
     PINN activation-function chromosomes.
@@ -424,6 +426,8 @@ def run_nsga2(X_u, u_train, X_f, X_star, u_star, lb, ub,
                    each is a dict with 'chromosome', 'f1', 'f2', 'info'
     history      : list of per-generation summaries
     """
+    if model_class is None:
+        model_class = HeterogeneousPINN
     rng = random.Random(SEED)
     np.random.seed(SEED)
 
@@ -448,7 +452,8 @@ def run_nsga2(X_u, u_train, X_f, X_star, u_star, lb, ub,
         results = evaluate_population(
             chromosomes, X_u, u_train, X_f, X_star, u_star,
             lb, ub, device=device,
-            checkpoint_path=checkpoint_path.replace('.json', '_gen0_eval.json')
+            checkpoint_path=checkpoint_path.replace('.json', '_gen0_eval.json'),
+            model_class=model_class
         )
         population = [
             {
@@ -519,9 +524,8 @@ def run_nsga2(X_u, u_train, X_f, X_star, u_star, lb, ub,
         offspring_results = evaluate_population(
             deduped_candidates, X_u, u_train, X_f, X_star, u_star,
             lb, ub, device=device,
-            checkpoint_path=checkpoint_path.replace(
-                '.json', f'_gen{gen+1}_eval.json'
-            )
+            checkpoint_path=checkpoint_path.replace('.json', f'_gen{gen+1}_eval.json'),
+            model_class=model_class
         )
 
         offspring = [

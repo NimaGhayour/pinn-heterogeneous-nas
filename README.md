@@ -122,7 +122,7 @@ This reversal is not a contradiction; it reflects a documented property of PINNs
 Independent studies confirm this pattern on Helmholtz specifically:
 - Al-Safwan, Song & Waheed (2021) compared Tanh, Atan, ELU, and Swish on a Helmholtz wavefield problem using the same 8-layer × 20-neuron architecture as ours, and found Swish gave the lowest L2 error of all activations tested (their best Tanh: ~5.5e-05; their best Swish: ~3.65e-05).
 - Hosseini Dashtbayaz et al. (2024) benchmarked Tanh against Sine on a Helmholtz equation with the same functional form as ours ($\sin(\pi x)\sin(n\pi y)$) and found Tanh's mean absolute error ranged from 0.59 to 4.72 across network widths, while Sine's stayed below 0.03 — a 100–1000× gap.
-- Sitzmann et al. (2020) first demonstrated that sinusoidal (SIREN) networks are strongly preferred over Tanh/ReLU-family activations for representing Wave and Helmholtz-type PDEs.
+- Sitzmann et al. (2020) first demonstrated that sinusoidal (SIREN) networks solve Helmholtz and wave-type boundary value problems substantially better than Tanh/ReLU-family activations, directly motivating the use of periodic activations for this class of PDE.
 
 Our result is directionally consistent with all three: Sine/Swish beat Tanh on Helmholtz, and by a wide margin. The absolute accuracy we achieve (2.25e-02) is weaker than the best published results above (which reach 1e-3–1e-5), which we attribute to our reduced-epoch proxy search protocol and the absence of additional techniques used in that literature (e.g., loss-term weighting, Fourier feature embeddings). Unlike that prior work, however, our activation choice was **not selected by hand** — NSGA-II discovered the Sine/Swish preference for Helmholtz (and the Tanh preference for Burgers) automatically, from the same unbiased search space, purely by evaluating candidates.
 
@@ -187,6 +187,6 @@ Results are saved to `results/` as `model.pt` (model weights + training history 
 4. Cuomo, S., et al. (2022). Scientific machine learning through physics-informed neural networks: Where we are and what's next. *Journal of Scientific Computing*, 92, 88.
 5. Wong, J. C., et al. (2025). Evolutionary optimization of physics-informed neural networks: Evo-PINN frontiers and opportunities. *(Survey)*
 6. Al-Safwan, A., Song, C., & bin Waheed, U. (2021). Is it time to swish? Comparing activation functions in solving the Helmholtz equation using physics-informed neural networks. *arXiv:2110.07721*.
-7. Hosseini Dashtbayaz, N., Farhani, G., Wang, B., & Ling, C. X. (2024). Physics-informed neural networks: Minimizing residual loss with wide networks and effective activations. *arXiv:2405.01680*.
+7. Hosseini Dashtbayaz, N., Farhani, G., Wang, B., & Ling, C. X. (2024). Physics-informed neural networks: Minimizing residual loss with wide networks and effective activations. *Proceedings of IJCAI 2024*. arXiv:2405.01680.
 8. Sitzmann, V., Martel, J., Bergman, A., Lindell, D., & Wetzstein, G. (2020). Implicit neural representations with periodic activation functions. *Advances in Neural Information Processing Systems*, 33, 7462–7473.
 9. Herrmann, L., Jokeit, M., Weeger, O., & Kollmannsberger, S. (2025). Introduction to Physics-Informed Neural Networks. In *Deep Learning in Computational Mechanics*. Springer, Cham.

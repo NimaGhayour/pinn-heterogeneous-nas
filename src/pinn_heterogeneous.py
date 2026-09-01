@@ -7,8 +7,6 @@ ACTIVATION_FUNCTIONS = {
     0: 'tanh',
     1: 'sine',
     2: 'swish',
-    3: 'relu',
-    4: 'sigmoid',
 }
 
 
@@ -18,7 +16,7 @@ class HeterogeneousPINN(nn.Module):
         """
         layers     : e.g. [2, 20, 20, 20, 20, 20, 20, 20, 20, 1]
         lb, ub     : domain bounds (numpy arrays)
-        chromosome : list of 8 ints, each in {0,1,2,3,4}
+        chromosome : list of 8 ints, each in {0,1,2}
                      one activation per hidden layer
         """
         super(HeterogeneousPINN, self).__init__()
@@ -54,12 +52,8 @@ class HeterogeneousPINN(nn.Module):
             return Sine()
         elif gene == 2:
             return Swish()
-        elif gene == 3:
-            return nn.ReLU()
-        elif gene == 4:
-            return nn.Sigmoid()
         else:
-            raise ValueError(f"Unknown gene value: {gene}. Must be in {{0,1,2,3,4}}")
+            raise ValueError(f"Unknown gene value: {gene}. Must be in {{0,1,2}}")
 
     def forward(self, x, t):
         inp = torch.cat([x, t], dim=1)  # (N, 2)
